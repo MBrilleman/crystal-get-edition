@@ -4,7 +4,7 @@ Describes all the changes made.
 
 ## Small edits from deassembly's Wiki tutorial
 
-Implemented most of the Tips and Tricks the original deassembly project's wiki tutorial provides
+Implemented most of the Tips and Tricks the original deassembly project's wiki tutorial provides.
 
 [**FOUND HERE**](https://github.com/pret/pokecrystal/wiki/Tips-and-tricks)
 
@@ -18,6 +18,6 @@ Changes made:
 
 ## Bug-Catching Contest can be done any day of the week
 
-Removed all checks for the current date when regarding the Bug-Catching Contest. So the contest is held and can be participated in regardless of the current day of the week. 
+Removed all checks for the current date regarding the Bug-Catching Contest. So the contest is held and can be participated in regardless of the current day of the week, essentially running 24/7.
 
 
