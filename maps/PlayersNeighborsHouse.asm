@@ -45,22 +45,34 @@ PlayersNeighborsHouseRadioScript:
 	end
 
 PlayersNeighborsDaughterText:
-	text "PIKACHU is an"
-	line "evolved #MON."
+	text "Maat vier turns,"
+	line "echt rekt jonge"
+	cont "Lolololol"
 
-	para "I was amazed by"
-	line "PROF.ELM's find-"
-	cont "ings."
+	para "Ik zou echt een"
+	line "ESCAPEROPE gebru-"
+	cont "-iken op de eerste"
+	cont "SUUDOWOODO die ik"
+	cont "zie"
 
-	para "He's so famous for"
-	line "his research on"
-	cont "#MON evolution."
+	para "..."
+	line "..."
+	cont "..."
+	cont "Ja dat heb je"
+	cont "goed gelezen."
 
-	para "…sigh…"
+	para "Oh! btw:"
+	line "Dit huis heeft"
+	cont "een ingang, maar"
+	cont "twee uitgangen."
+	cont "links EN rechts"
+	cont "Kijk zelf maar!"
 
-	para "I wish I could be"
-	line "a researcher like"
-	cont "him…"
+	para "DDDM"
+	line "Dat betekend:"
+	cont "Doei Doei De"
+	cont "Mazzel!"
+
 	done
 
 PlayersNeighborText:
@@ -100,8 +112,9 @@ PlayersNeighborsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, NEW_BARK_TOWN, 3
-	warp_event  3,  7, NEW_BARK_TOWN, 3
+	warp_event  2,  7, ROUTE_35_NATIONAL_PARK_GATE, 3
+	warp_event  3,  7, SILVER_CAVE_ROOM_3, 1
+	
 
 	def_coord_events
 

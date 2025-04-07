@@ -34,15 +34,10 @@ Route35NationalParkBugContestIsRunningScript:
 	endcallback
 
 Route35NationalParkGateCheckIfContestAvailableCallback:
-	readvar VAR_WEEKDAY
-	ifequal TUESDAY, .SetContestOfficer
-	ifequal THURSDAY, .SetContestOfficer
-	ifequal SATURDAY, .SetContestOfficer
+	appear ROUTE35NATIONALPARKGATE_OFFICER1
+	appear ROUTE35NATIONALPARKGATE_YOUNGSTER
 	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue Route35NationalParkBugContestIsRunningScript
-	disappear ROUTE35NATIONALPARKGATE_OFFICER1
-	appear ROUTE35NATIONALPARKGATE_YOUNGSTER
-	appear ROUTE35NATIONALPARKGATE_OFFICER2
 	endcallback
 
 .SetContestOfficer:
@@ -78,11 +73,6 @@ Route35NationalParkGateLeavingContestEarlyScript:
 	end
 
 Route35OfficerScriptContest:
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, Route35NationalParkGate_NoContestToday
-	ifequal MONDAY, Route35NationalParkGate_NoContestToday
-	ifequal WEDNESDAY, Route35NationalParkGate_NoContestToday
-	ifequal FRIDAY, Route35NationalParkGate_NoContestToday
 	faceplayer
 	opentext
 	checkflag ENGINE_DAILY_BUG_CONTEST
@@ -231,8 +221,11 @@ Route35NationalParkGateOfficer1AskToParticipateText:
 	para "Bug-Catching Con-"
 	line "test is on today."
 
-	para "The rules are sim-"
-	line "ple."
+	para "But then again..."
+	line "So is every day"
+	cont "since all of"
+	cont "these new changes"
+	cont "took place..."
 
 	para "Using one of your"
 	line "#MON, catch a"
@@ -245,9 +238,30 @@ Route35NationalParkGateOfficer1AskToParticipateText:
 	done
 
 Route35NationalParkGateOfficer1GiveParkBallsText:
-	text "Here are the PARK"
+	text "Best of luck to"
+	line "you. I hope you"
+	cont "catch something"
+	cont "good!"
+
+	para "Last time I ent-"
+	line "ered, I caught a"
+	cont "CATERPIE..."
+	cont "My wife won't talk"
+	cont "to me anymore..."
+
+	para "The kids ignore me"
+	line "and even the dog"
+	cont "has lost respect"
+	cont "for me..."
+
+	para "... ..."
+	line "... ..."
+	cont "So, anyway:"
+
+	para "Here are the PARK"
 	line "BALLS for the"
 	cont "Contest."
+
 	done
 
 Route35NationalParkGatePlayerReceivedParkBallsText:
@@ -266,7 +280,7 @@ Route35NationalParkGateOfficer1ExplainsRulesText:
 
 	para "If you run out of"
 	line "PARK BALLS, you're"
-	cont "done."
+	cont "done, get, rekt."
 
 	para "You can keep the"
 	line "last #MON you"
@@ -277,6 +291,16 @@ Route35NationalParkGateOfficer1ExplainsRulesText:
 
 	para "#MON you can"
 	line "find!"
+
+	para "And avoid those"
+	line "weak CATERPIES!"
+
+	para "please"
+	line "You don't want to"
+	cont "end up like me..."
+
+	para "She said she'll"
+	line "take the kids..."
 	done
 
 Route35NationalParkGateOfficer1AskToUseFirstMonText:
@@ -413,6 +437,18 @@ Route35NationalParkGateYoungsterText:
 	text "When is the next"
 	line "Bug-Catching Con-"
 	cont "test going to be?"
+
+	para "A better question"
+	line "Would be:"
+
+	para "when isn't it?"
+
+	para "Everything seems"
+	line "diffrent, yet also"
+	line "the same..."
+
+	para "is this a paralel"
+	line "universe?"
 	done
 
 BugCatchingContestExplanationText:
