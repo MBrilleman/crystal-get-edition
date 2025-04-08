@@ -15,9 +15,12 @@ Changes made:
 - Enemy trainers have maximum happiness for a powerful Return.
 - Use original Cycling Road behavior (Holding A or B activates the brakes).
 - Make Hidden Power always have 60 base power (type is still random).
-- Make Kurt give Apicornballs instantly.
-- Low Health beeps stops after beeping four times.
-- Made tms reuseable.
+
+## Other small tweaks and changes
+
+- [Kurt makes Apicornballs instantly.](https://github.com/pret/pokecrystal/wiki/Kurt-Makes-Pokeballs-Instantly)
+- [Low Health beeps stops after beeping four times.](https://github.com/pret/pokecrystal/wiki/Short-beeping-noise-for-low-HP)
+- [Infinitely reuseable TMs.](https://github.com/pret/pokecrystal/wiki/Infinitely-reusable-TMs)
 
 ## Bug-Catching Contest can be done any day of the week
 
@@ -36,3 +39,7 @@ Removed all checks for the current date regarding the Bug-Catching Contest. So t
 In the Generation 2 Pokémon games, the attack stat was used to determine the Pokémons gender. This sadly resulted in female gendered Pokémon being generated with lower attack values then males. 
 
 The code to determine a Pokémons gender was modified so that more stats are used to determine a Pokémons gender, also resulting in female gendered Pokémon being generated with equal stats as those of male gendered Pokémon.
+
+## Added tradeback NPC
+
+Added Samson Oak in Elm's Pokémon Lab. Trading a Pokémon to Samson Oak instantly trades back the same Pokémon back to you, triggering trade evolutions without having to connect to a second game.
