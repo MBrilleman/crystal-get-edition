@@ -14,13 +14,13 @@ Changes made:
 - Make overworld sprites darker at night.
 - Enemy trainers have maximum happiness for a powerful Return.
 - Use original Cycling Road behavior (Holding A or B activates the brakes).
-- Make Hidden Power always have 60 base power (type is still random).
+- Make Hidden Power always have 60 base power (type is still determined by the Pokémon DV's).
 
 ## Other small tweaks and changes
 
-- [Kurt makes Apicornballs instantly.](https://github.com/pret/pokecrystal/wiki/Kurt-Makes-Pokeballs-Instantly)
-- [Low Health beeps stops after beeping four times.](https://github.com/pret/pokecrystal/wiki/Short-beeping-noise-for-low-HP)
-- [Infinitely reuseable TMs.](https://github.com/pret/pokecrystal/wiki/Infinitely-reusable-TMs)
+- Kurt now makes Apicornballs instantly.
+- Low Health beeps stops after beeping four times.
+- Infinitely reuseable TMs.
 
 ## Bug-Catching Contest can be done any day of the week
 
