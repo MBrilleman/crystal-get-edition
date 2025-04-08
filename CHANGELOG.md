@@ -15,11 +15,17 @@ Changes made:
 - Enemy trainers have maximum happiness for a powerful Return.
 - Use original Cycling Road behavior (Holding A or B activates the brakes).
 - Make Hidden Power always have 60 base power (type is still random).
-- Make Kurt give pokeballs instantly.
-- low health 'muziek' duiurt niet meer lang
+- Make Kurt give Apicornballs instantly.
+- Low Health beeps stops after beeping four times.
 
 ## Bug-Catching Contest can be done any day of the week
 
 Removed all checks for the current date regarding the Bug-Catching Contest. So the contest is held and can be participated in regardless of the current day of the week, essentially running 24/7.
 
 
+## Rival's Pokémon have held items
+
+- Removed code that forbade the Rival having held items on their Pokémon.
+- Gave the unevolved starter Pokémon on each Rival's team a BERRY (10 HP).
+- Gave the evolved starter Pokémon on each Rival's team a GOLD BERRY (30 HP).
+- Gave the Sneasel on each Rival's team a MIRACLE BERRY (Gen 2's Lum Berry).
