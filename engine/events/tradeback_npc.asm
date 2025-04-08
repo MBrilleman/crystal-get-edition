@@ -116,7 +116,10 @@ TradeWithTradebackGuy:
 
 TradebackGuyText::
 	text "Hello there! I'm"
-	line "the TRADEBACK GUY."
+	line "Oak's cousin,"
+    cont "Samson Oak, also"
+    cont "known as the"
+    cont "TRADEBACK GUY."
 
 	para "I can trade a"
 	line "#MON of your"
