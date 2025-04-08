@@ -17,6 +17,7 @@ Changes made:
 - Make Hidden Power always have 60 base power (type is still random).
 - Make Kurt give Apicornballs instantly.
 - Low Health beeps stops after beeping four times.
+- Made tms reuseable.
 
 ## Bug-Catching Contest can be done any day of the week
 
