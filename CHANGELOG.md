@@ -33,4 +33,5 @@ Removed all checks for the current date regarding the Bug-Catching Contest. So t
 ## Removed sexism
 
 In the Generation 2 Pokémon games, the attack stat was used to determine the Pokémons gender. This sadly resulted in female gendered Pokémon being generated with lower attack values then males. 
+
 The code to determine a Pokémons gender was modified so that more stats are used to determine a Pokémons gender, also resulting in female gendered Pokémon being generated with equal stats as those of male gendered Pokémon.
