@@ -15,6 +15,8 @@ Changes made:
 - Enemy trainers have maximum happiness for a powerful Return.
 - Use original Cycling Road behavior (Holding A or B activates the brakes).
 - Make Hidden Power always have 60 base power (type is still random).
+- Make Kurt give pokeballs instantly.
+- low health 'muziek' duiurt niet meer lang
 
 ## Bug-Catching Contest can be done any day of the week
 
