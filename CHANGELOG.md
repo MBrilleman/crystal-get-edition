@@ -19,6 +19,7 @@ Changes made:
 - Spore moves now don't affect grass types, ai is also updated to discourage spore moves on grass types.
 - overworld usable moves can be used if a pokemon can learn it (surf, headbutt). 
 - Added running by holding 'B'.
+- Tms now display names when buying or given to player.
 
 ## Other small tweaks and changes
 
