@@ -20,6 +20,7 @@ Changes made:
 - overworld usable moves can be used if a pokemon can learn it (surf, headbutt). 
 - Added running by holding 'B'.
 - Tms now display names when buying or given to player.
+- added the pc as a key item so it is accessible from everywhere.
 
 ## Other small tweaks and changes
 
