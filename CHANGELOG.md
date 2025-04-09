@@ -18,6 +18,7 @@ Changes made:
 - When a repel runs out, question is asked whether to use another one.
 - Spore moves now don't affect grass types, ai is also updated to discourage spore moves on grass types.
 - overworld usable moves can be used if a pokemon can learn it (surf, headbutt). 
+- Added running by holding 'B'.
 
 ## Other small tweaks and changes
 
