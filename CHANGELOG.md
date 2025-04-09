@@ -15,6 +15,8 @@ Changes made:
 - Enemy trainers have maximum happiness for a powerful Return.
 - Use original Cycling Road behavior (Holding A or B activates the brakes).
 - Make Hidden Power always have 60 base power (type is still determined by the Pokémon DV's).
+- When a repel runs out, question is asked whether to use another one.
+- Spore moves now don't affect grass types, ai is also updated to discourage spore moves on grass types.
 
 ## Other small tweaks and changes
 
