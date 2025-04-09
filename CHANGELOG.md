@@ -4,9 +4,9 @@ Describes all the changes made.
 
 ## Small edits from deassembly's Wiki tutorial
 
-Implemented most of the Tips and Tricks the original deassembly project's wiki tutorial provides.
+Implemented most of the changes the original deassembly project's wiki tutorial provides.
 
-[**FOUND HERE**](https://github.com/pret/pokecrystal/wiki/Tips-and-tricks)
+[**FOUND HERE**](https://github.com/pret/pokecrystal/wiki/Tutorials)
 
 Changes made:
 - Sped up healing animation at Pokémon Center.
@@ -17,20 +17,20 @@ Changes made:
 - Make Hidden Power always have 60 base power (type is still determined by the Pokémon DV's).
 - When a repel runs out, question is asked whether to use another one.
 - Spore moves now don't affect grass types, ai is also updated to discourage spore moves on grass types.
-- overworld usable moves can be used if a pokemon can learn it (surf, headbutt). 
+- Field moves can be used by Pokémon that can learn the move but don't have the move learned, e.g. Surf or Cut. (Badges still required)
 - Added running by holding 'B'.
 - Tms now display names when buying or given to player.
-- added the pc as a key item so it is accessible from everywhere.
-
-## Other small tweaks and changes
-
+- Added the PC as a key item so it is accessible from everywhere.
 - Kurt now makes Apicornballs instantly.
 - Low Health beeps stops after beeping four times.
 - Infinitely reuseable TMs.
+- Enemy trainers no longer have a 25% extra chance of missing their status moves.
 
-## Bug-Catching Contest can be done any day of the week
+## Other small tweaks and changes
 
-Removed all checks for the current date regarding the Bug-Catching Contest. So the contest is held and can be participated in regardless of the current day of the week, essentially running 24/7.
+- The Bug-catching contest is no longer restricted to Tuesdays, Thursdays and Saturdays. But is now instead held every day of the week.
+- Monica (Sharp Beak gift giver) now spawns every day of the week, instead of only on Mondays.
+- Arthur (Hard Stone gift giver) now spawns every day of the week, instead of only on Thursdays.
 
 
 ## Rival's Pokémon have held items
