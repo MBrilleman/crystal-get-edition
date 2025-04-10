@@ -15,22 +15,34 @@ Changes made:
 - Enemy trainers have maximum happiness for a powerful Return.
 - Use original Cycling Road behavior (Holding A or B activates the brakes).
 - Make Hidden Power always have 60 base power (type is still determined by the Pokémon DV's).
-- When a repel runs out, question is asked whether to use another one.
-- Spore moves now don't affect grass types, ai is also updated to discourage spore moves on grass types.
+- When a repel runs out, the player asked whether to use another one.
+- Spore based moves now don't affect grass types, e.g Sleep powder or Poison powder. Updated NPC AI to discourage using spore moves on grass types.
 - Field moves can be used by Pokémon that can learn the move but don't have the move learned, e.g. Surf or Cut. (Badges still required)
 - Added running by holding 'B'.
 - Tms now display names when buying or given to player.
 - Added the PC as a key item so it is accessible from everywhere.
 - Kurt now makes Apicornballs instantly.
-- Low Health beeps stops after beeping four times.
+- Low Health beeps stop after beeping four times.
 - Infinitely reuseable TMs.
 - Enemy trainers no longer have a 25% extra chance of missing their status moves.
 
-## Other small tweaks and changes
+## Bug-catching contest
 
-- The Bug-catching contest is no longer restricted to Tuesdays, Thursdays and Saturdays. But is now instead held every day of the week.
-- Monica (Sharp Beak gift giver) now spawns every day of the week, instead of only on Mondays.
-- Arthur (Hard Stone gift giver) now spawns every day of the week, instead of only on Thursdays.
+Removed all checks for the current day of the week regarding the Bug-catching contest.
+
+It is no longer restricted to Tuesdays, Thursdays and Saturdays.
+
+The contest can now be participated in every day of the week, essentially running 24/7.
+
+## Week Siblings
+
+Removed all checks for the current day of the week regarding the week siblings.
+
+Each day of the week, Monday through Sunday, one of seven siblings would spawn in diffrent locations around Johto. Giving out type-enhancing held items.
+
+All seven of them now spawn every day of the week (Their spawn locations remain unchanged). 
+
+Removed all mentions of weekdays in their text. Instead they make jokes and puns about days.
 
 
 ## Rival's Pokémon have held items

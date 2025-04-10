@@ -21,12 +21,6 @@ BlackthornCityFlypointCallback:
 	endcallback
 
 BlackthornCitySantosCallback:
-	readvar VAR_WEEKDAY
-	ifequal SATURDAY, .SantosAppears
-	disappear BLACKTHORNCITY_SANTOS
-	endcallback
-
-.SantosAppears:
 	appear BLACKTHORNCITY_SANTOS
 	endcallback
 
@@ -90,8 +84,6 @@ SantosScript:
 	opentext
 	checkevent EVENT_GOT_SPELL_TAG_FROM_SANTOS
 	iftrue .Saturday
-	readvar VAR_WEEKDAY
-	ifnotequal SATURDAY, .NotSaturday
 	checkevent EVENT_MET_SANTOS_OF_SATURDAY
 	iftrue .MetSantos
 	writetext MeetSantosText
@@ -112,12 +104,6 @@ SantosScript:
 	writetext SantosSaturdayText
 	waitbutton
 .Done:
-	closetext
-	end
-
-.NotSaturday:
-	writetext SantosNotSaturdayText
-	waitbutton
 	closetext
 	end
 
@@ -227,10 +213,7 @@ BlackthornYoungsterText:
 MeetSantosText:
 	text "SANTOS: …"
 
-	para "It's Saturday…"
-
-	para "I'm SANTOS of"
-	line "Saturday…"
+	para "I'm SANTOS"
 	done
 
 SantosGivesGiftText:
@@ -247,21 +230,33 @@ SantosGaveGiftText:
 
 	para "It will frighten"
 	line "you…"
+
+	para "Spook you…"
+
+	para "Maybe even…"
+	line "put you in a"
+	cont "DAYze…"
+
+	para "Get it?"
+
+	para "Sorry about that…"
 	done
 
 SantosSaturdayText:
 	text "SANTOS: …"
 
-	para "See you again on"
-	line "another Saturday…"
+	para "My family"
+	line "…"
 
-	para "I won't have any"
-	line "more gifts…"
-	done
+	para "They're obsessed"
+	line "with days…"
 
-SantosNotSaturdayText:
-	text "SANTOS: Today's"
-	line "not Saturday…"
+	para "Atleast they have"
+	line "stopped caring"
+	cont "about weekdays"
+
+	para "…"
+	line "It's progress…"
 	done
 
 BlackthornCooltrainerF2Text:

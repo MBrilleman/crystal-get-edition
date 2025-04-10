@@ -39,6 +39,10 @@ DayOfWeekSiblingsHousePokedexText2:
 	line "to you, give them"
 	cont "something useful."
 
+	para "Also, try to talk"
+	line "to them for as"
+	cont "long as you can."
+
 	para "Love,"
 	line "MONICA"
 
@@ -46,25 +50,25 @@ DayOfWeekSiblingsHousePokedexText2:
 	done
 
 DayOfWeekSiblingsHousePokedexText3:
-	text "Monday, MONICA"
+	text "MONICA"
 	line "ROUTE 40"
 
-	para "Tuesday, TUSCANY"
+	para "TUSCANY"
 	line "ROUTE 29"
 
-	para "Wednesday, WESLEY"
+	para "WESLEY"
 	line "LAKE OF RAGE"
 
-	para "Thursday, ARTHUR"
+	para "ARTHUR"
 	line "ROUTE 36"
 
-	para "Friday, FRIEDA"
+	para "FRIEDA"
 	line "ROUTE 32"
 
-	para "Saturday, SANTOS"
+	para "SANTOS"
 	line "BLACKTHORN CITY"
 
-	para "Sunday, SUNNY"
+	para "SUNNY"
 	line "ROUTE 37"
 	done
 

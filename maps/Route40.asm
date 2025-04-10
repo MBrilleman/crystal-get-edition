@@ -277,7 +277,10 @@ MeetMonicaText:
 	text "MONICA: Glad to"
 	line "meet you. I'm"
 
-	para "MONICA of any day."
+	para "MONICA. I like the"
+	line "band: Green Day"
+	cont "do you have a"
+	cont "favorite band?"
 	done
 
 MonicaGivesGiftText:
@@ -296,6 +299,15 @@ MonicaGaveGiftText:
 	para "You should equip a"
 	line "bird #MON with"
 	cont "that item."
+
+	para "Altough..."
+	line "bird #MON don't"
+	cont "exist... So I have"
+	cont "no idea why I said"
+	cont "that."
+
+	para "It's flying type"
+	line "#mon I meant"
 	done
 
 MonicaMondayText:

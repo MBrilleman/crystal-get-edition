@@ -33,12 +33,6 @@ Route32Noop3Scene:
 	end
 
 Route32FriedaCallback:
-	readvar VAR_WEEKDAY
-	ifequal FRIDAY, .FriedaAppears
-	disappear ROUTE32_FRIEDA
-	endcallback
-
-.FriedaAppears:
 	appear ROUTE32_FRIEDA
 	endcallback
 
@@ -454,8 +448,6 @@ FriedaScript:
 	opentext
 	checkevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
 	iftrue .Friday
-	readvar VAR_WEEKDAY
-	ifnotequal FRIDAY, .NotFriday
 	checkevent EVENT_MET_FRIEDA_OF_FRIDAY
 	iftrue .MetFrieda
 	writetext MeetFriedaText
@@ -479,11 +471,6 @@ FriedaScript:
 	closetext
 	end
 
-.NotFriday:
-	writetext FriedaNotFridayText
-	waitbutton
-	closetext
-	end
 
 Route32GreatBall:
 	itemball GREAT_BALL
@@ -857,12 +844,11 @@ Text_RoarOutro:
 
 MeetFriedaText:
 	text "FRIEDA: Yahoo!"
-	line "It's Friday!"
+	line "It's a good day to"
+	cont "be alive!"
 
-	para "I'm FRIEDA of"
-	line "Friday!"
-
-	para "Nice to meet you!"
+	para "I'm FRIEDA."
+	line "Nice to meet you!"
 	done
 
 FriedaGivesGiftText:
@@ -888,19 +874,26 @@ FriedaFridayText:
 	text "FRIEDA: Hiya! What"
 	line "day do you like?"
 
-	para "I love Friday. No"
-	line "doubt about it!"
+	para "I love any day I"
+	line "get to talk to awe-"
+	cont "some people like"
+	cont "you!"
+
+	para "I am daym sure of"
+	line "that!"
+
+	para "Get it?"
 
 	para "Don't you think"
 	line "it's great too?"
-	done
 
-FriedaNotFridayText:
-	text "FRIEDA: Isn't it"
-	line "Friday today?"
+	para "Maybe even..."
+	line "DAYm great!?!?!?"
 
-	para "It's so boring"
-	line "when it's not!"
+	para "Why are you slowly"
+	line "walking away from"
+	cont "me?"
+
 	done
 
 Route32SignText:

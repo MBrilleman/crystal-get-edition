@@ -560,22 +560,64 @@ SchoolboyAlanBooksText:
 	text "Darn. I study five"
 	line "hours a day too."
 
-	para "There's more to"
-	line "learning than just"
-	cont "reading books."
+	para "Oh shoot! Don't"
+	line "mention to Arthur"
+	cont "over there I said"
+	cont "The 'D' word..."
+
+	para "If you do he won't"
+	line "shut up about it."
 	done
 
 MeetArthurText:
 	text "ARTHUR: Who are"
 	line "you?"
 
-	para "I'm ARTHUR of"
-	line "any day."
+	para "Wait!"
+	line "Don't say it!"
+	cont "Let me guess..."
+
+	para "Is your name:"
+
+	para "DAYvid? DAYvy?"
+	line "DAYn? DAYniel?"
+
+	para "Wesley Snipes?"
+	line "because he's a"
+	cont "DAY walker..."
+	cont "get it?"
+
+	para "Judging by the"
+	line "look on your face"
+	cont "you don't..."
+
+	para "Or you really"
+	line "don't care about"
+	cont "any of this."
+
+	para "I mean why would"
+	line "you? You're only"
+	cont "here for my free"
+	cont "item. Be honest."
+
+	para "Let me atleast"
+	line "introduce myself:"
+
+	para "I'm ARTHUR, nice"
+	line "to meet you!"
+
+	para "... ..."
+	line "... ..."
+	
+	para "Wow! No reaction"
+	line "at all!"
+	cont "It's like talking"
+	cont "to a brick wall"
+	cont "over here..."
 	done
 
 ArthurGivesGiftText:
-	text "Here. You can have"
-	line "this."
+	text "Fine. Take it"
 	done
 
 ArthurGaveGiftText:
@@ -587,14 +629,25 @@ ArthurGaveGiftText:
 
 	para "It pumps up rock-"
 	line "type attacks."
+
+	para "Oh so you DO care"
+	
+	para "Just not about me.."
+	line "I know when I'm"
+	cont "not wanted..."
 	done
 
 ArthurThursdayText:
 	text "ARTHUR: I'm ARTHUR"
-	line "of any day. I'm"
+	line "I'm the second"
+	cont "son out of seven"
+	cont "children."
 
-	para "the second son out"
-	line "of seven children."
+	para "You still don't"
+	line "care at all"
+	cont "do you?"
+
+	para "Guess not!"
 	done
 
 Route36SignText:

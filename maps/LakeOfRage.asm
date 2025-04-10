@@ -32,12 +32,6 @@ LakeOfRageFlypointCallback:
 	endcallback
 
 LakeOfRageWesleyCallback:
-	readvar VAR_WEEKDAY
-	ifequal WEDNESDAY, .WesleyAppears
-	disappear LAKEOFRAGE_WESLEY
-	endcallback
-
-.WesleyAppears:
 	appear LAKEOFRAGE_WESLEY
 	endcallback
 
@@ -192,8 +186,6 @@ WesleyScript:
 	opentext
 	checkevent EVENT_GOT_BLACKBELT_FROM_WESLEY
 	iftrue WesleyWednesdayScript
-	readvar VAR_WEEKDAY
-	ifnotequal WEDNESDAY, WesleyNotWednesdayScript
 	checkevent EVENT_MET_WESLEY_OF_WEDNESDAY
 	iftrue .MetWesley
 	writetext MeetWesleyText
@@ -214,12 +206,6 @@ WesleyWednesdayScript:
 	writetext WesleyWednesdayText
 	waitbutton
 WesleyDoneScript:
-	closetext
-	end
-
-WesleyNotWednesdayScript:
-	writetext WesleyNotWednesdayText
-	waitbutton
 	closetext
 	end
 
@@ -443,18 +429,26 @@ CooltrainerfLoisAfterBattleText:
 MeetWesleyText:
 	text "WESLEY: Well, how"
 	line "do you do?"
-
-	para "Seeing as how it's"
-	line "Wednesday today,"
-
-	para "I'm WESLEY of"
-	line "Wednesday."
 	done
 
 WesleyGivesGiftText:
-	text "Pleased to meet"
-	line "you. Please take a"
-	cont "souvenir."
+	text "Weapons in the"
+	line "east and weapons"
+	cont "planted in the"
+	cont "west, o-oh"
+
+	para "they can't stop us"-
+
+	para "they can't stop us"
+	line "walking out here"
+	cont "at our best"
+	cont "come on!"
+
+	para "Iiii save the day."
+
+	para "I save tommorow."
+
+	para "So I can run away."
 	done
 
 WesleyGaveGiftText:
@@ -472,12 +466,6 @@ WesleyWednesdayText:
 
 	para "Or did you just"
 	line "get lucky?"
-	done
-
-WesleyNotWednesdayText:
-	text "WESLEY: Today's"
-	line "not Wednesday."
-	cont "That's too bad."
 	done
 
 LakeOfRageSignText:

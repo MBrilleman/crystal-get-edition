@@ -14,12 +14,6 @@ Route37_MapScripts:
 	callback MAPCALLBACK_OBJECTS, Route37SunnyCallback
 
 Route37SunnyCallback:
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .SunnyAppears
-	disappear ROUTE37_SUNNY
-	endcallback
-
-.SunnyAppears:
 	appear ROUTE37_SUNNY
 	endcallback
 
@@ -61,8 +55,6 @@ SunnyScript:
 	opentext
 	checkevent EVENT_GOT_MAGNET_FROM_SUNNY
 	iftrue SunnySundayScript
-	readvar VAR_WEEKDAY
-	ifnotequal SUNDAY, SunnyNotSundayScript
 	checkevent EVENT_MET_SUNNY_OF_SUNDAY
 	iftrue .MetSunny
 	writetext MeetSunnyText
@@ -174,9 +166,33 @@ PsychicGregAfterBattleText:
 MeetSunnyText:
 	text "SUNNY: Hi!"
 
-	para "I'm SUNNY of Sun-"
-	line "day, meaning it's"
-	cont "Sunday today!"
+	para "I'm SUNNY!"
+	line "We all stopped"
+	cont "caring about the"
+	cont "current day of the"
+	cont "week."
+
+	para "Instead, we make"
+	line "references to thi-"
+	cont "ngs that contain"
+	cont "a day or are about"
+	cont "a day."
+
+	para "But not weekdays"
+	cont "those are so 2000"
+
+	para "also, bee tee dubs"
+	line "some of us talk"
+	cont "alot, and I mean"
+	cont "alot."
+
+	para "like, alot alot"
+
+	para "That's the price"
+	line "you have to pay"
+	cont "for those free it-"
+	cont "ems we all give"
+	cont "you lot."
 	done
 
 SunnyGivesGiftText1:
@@ -223,12 +239,6 @@ SunnySundayText:
 
 	para "They're all older"
 	line "than me!"
-	done
-
-SunnyNotSundayText:
-	text "SUNNY: Isn't today"
-	line "Sunday?"
-	cont "Um… I forgot!"
 	done
 
 Route37SignText:

@@ -26,13 +26,7 @@ Route29TuscanyCallback:
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue .DoesTuscanyAppear
 
-.TuscanyDisappears:
-	disappear ROUTE29_TUSCANY
-	endcallback
-
 .DoesTuscanyAppear:
-	readvar VAR_WEEKDAY
-	ifnotequal TUESDAY, .TuscanyDisappears
 	appear ROUTE29_TUSCANY
 	endcallback
 
@@ -169,8 +163,6 @@ TuscanyScript:
 	opentext
 	checkevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
 	iftrue TuscanyTuesdayScript
-	readvar VAR_WEEKDAY
-	ifnotequal TUESDAY, TuscanyNotTuesdayScript
 	checkevent EVENT_MET_TUSCANY_OF_TUESDAY
 	iftrue .MetTuscany
 	writetext MeetTuscanyText
@@ -191,12 +183,6 @@ TuscanyTuesdayScript:
 	writetext TuscanyTuesdayText
 	waitbutton
 TuscanyDoneScript:
-	closetext
-	end
-
-TuscanyNotTuesdayScript:
-	writetext TuscanyNotTuesdayText
-	waitbutton
 	closetext
 	end
 
@@ -356,8 +342,15 @@ MeetTuscanyText:
 	para "Please allow me to"
 	line "introduce myself."
 
-	para "I am TUSCANY of"
-	line "Tuesday."
+	para "I am TUSCANY"
+	line "and it looks like"
+
+	para "it's gonna be a"
+	line "great day today"
+
+	para "to get some fresh"
+	line "air like a stray"
+	cont "on a straightaway"
 	done
 
 TuscanyGivesGiftText:
@@ -390,12 +383,6 @@ TuscanyTuesdayText:
 
 	para "I am the second of"
 	line "seven children."
-	done
-
-TuscanyNotTuesdayText:
-	text "TUSCANY: Today is"
-	line "not Tuesday. That"
-	cont "is unfortunate…"
 	done
 
 Route29Sign1Text:
