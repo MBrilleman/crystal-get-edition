@@ -61,3 +61,8 @@ The code to determine a Pokémons gender was modified so that more stats are use
 ## Added tradeback NPC
 
 Added Samson Oak in Elm's Pokémon Lab. Trading a Pokémon to Samson Oak instantly trades back the same Pokémon back to you, triggering trade evolutions without having to connect to a second game.
+
+## Bug fixes
+
+- Fixed Rival1 (Early game rival) having higher stats on their Pokémon then Rival2 (Late game rival)
+- Fixed Dragon Scale getting the Dragon type-enhancing effect instead of the Dragon Fang. Now both held items give the power boost. 

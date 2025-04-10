@@ -85,12 +85,6 @@ SunnyDoneScript:
 	closetext
 	end
 
-SunnyNotSundayScript:
-	writetext SunnyNotSundayText
-	waitbutton
-	closetext
-	end
-
 Route37Sign:
 	jumptext Route37SignText
 

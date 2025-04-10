@@ -437,7 +437,7 @@ WesleyGivesGiftText:
 	cont "planted in the"
 	cont "west, o-oh"
 
-	para "they can't stop us"-
+	para "they can't stop us"
 
 	para "they can't stop us"
 	line "walking out here"
