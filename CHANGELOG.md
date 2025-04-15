@@ -28,20 +28,15 @@ Changes made:
 
 ## Bug-catching contest
 
-Removed all checks for the current day of the week regarding the Bug-catching contest.
-
-It is no longer restricted to Tuesdays, Thursdays and Saturdays.
-
+Removed all checks for the current day of the week regarding the Bug-catching contest.\
+It is no longer restricted to Tuesdays, Thursdays and Saturdays.\
 The contest can now be participated in every day of the week, essentially running 24/7.
 
 ## Week Siblings
 
-Removed all checks for the current day of the week regarding the week siblings.
-
-Each day of the week, Monday through Sunday, one of seven siblings would spawn in diffrent locations around Johto. Giving out type-enhancing held items.
-
-All seven of them now spawn every day of the week (Their spawn locations remain unchanged). 
-
+Removed all checks for the current day of the week regarding the week siblings.\
+Each day of the week, Monday through Sunday, one of seven siblings would spawn in diffrent locations around Johto. Giving out type-enhancing held items.\
+All seven of them now spawn every day of the week (Their spawn locations remain unchanged).\
 Removed all mentions of weekdays in their text. Instead they make jokes and puns about days.
 
 
@@ -54,8 +49,7 @@ Removed all mentions of weekdays in their text. Instead they make jokes and puns
 
 ## Removed sexism
 
-In the Generation 2 Pokémon games, the attack stat was used to determine the Pokémons gender. This sadly resulted in female gendered Pokémon being generated with lower attack values then males. 
-
+In the Generation 2 Pokémon games, the attack stat was used to determine the Pokémons gender. This sadly resulted in female gendered Pokémon being generated with lower attack values than males.\
 The code to determine a Pokémons gender was modified so that more stats are used to determine a Pokémons gender, also resulting in female gendered Pokémon being generated with equal stats as those of male gendered Pokémon.
 
 ## Added tradeback NPC
@@ -64,5 +58,15 @@ Added Samson Oak in Elm's Pokémon Lab. Trading a Pokémon to Samson Oak instant
 
 ## Bug fixes
 
-- Fixed Rival1 (Early game rival) having higher stats on their Pokémon then Rival2 (Late game rival)
+- Fixed Rival1 (Early game rival) having higher stats on their Pokémon than Rival2 (Late game rival)
 - Fixed Dragon Scale getting the Dragon type-enhancing effect instead of the Dragon Fang. Now both held items give the power boost. 
+- Burn, Poison and Paralysis now effect the catch rate of wild Pokémon as intended.
+- The Apicorn balls (Moon Ball, Love Ball, Fast Ball, Heavy Ball) now all work as intended. 
+- The speed stat reduction from Paralysis and the attack stat reduction from Burned now get properly applied to Pokémon that switch in with those status conditions.
+- Glacier Badge stat boost now always properly applies. 
+- Fixed a bug where the NPC AI looked at the wrong Pokémon when deciding to use Mean Look or not. 
+- Added Solarbeam, Flame Wheel and Moonlight to the list of moves the NPC AI is encouraged to use if it knows Sunny Day.
+- Fixed the NPC AI trying (and failing) to use another Future Sight move when a previous one is still in effect. 
+- NPC AI using a Full Heal on their Pokémon now also restores the Confused and Nightmare status effects. 
+- Fixed a bug where wild Pokémon that used the move Teleport with a significantly lower level than your Pokémon ran away instead of the Teleport move failing. 
+- Fixed a bug where failing to hit the move Beat Up sometimes caused using the move Substitute to fail. 
