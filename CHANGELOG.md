@@ -15,7 +15,7 @@ Changes made:
 - Enemy trainers have maximum happiness for a powerful Return.
 - Use original Cycling Road behavior (Holding A or B activates the brakes).
 - Make Hidden Power always have 60 base power (type is still determined by the Pokémon DV's).
-- When a repel runs out, the player asked whether to use another one.
+- When a repel runs out, the player is asked whether to use another one.
 - Spore based moves now don't affect grass types, e.g Sleep powder or Poison powder. Updated NPC AI to discourage using spore moves on grass types.
 - Field moves can be used by Pokémon that can learn the move but don't have the move learned, e.g. Surf or Cut. (Badges still required)
 - Added running by holding 'B'.
@@ -70,3 +70,6 @@ Added Samson Oak in Elm's Pokémon Lab. Trading a Pokémon to Samson Oak instant
 - NPC AI using a Full Heal on their Pokémon now also restores the Confused and Nightmare status effects. 
 - Fixed a bug where wild Pokémon that used the move Teleport with a significantly lower level than your Pokémon ran away instead of the Teleport move failing. 
 - Fixed a bug where failing to hit the move Beat Up sometimes caused using the move Substitute to fail. 
+- Sped up the slow HP bar depletion when a Pokémon with high HP is hit by a strong move. 
+- Fixed an audio bug in the Slot Machines where the payout sound effects cut each other off. 
+- Added the Team Rocket encounter theme to Rocket Excecutives and Rocket Scientists.
