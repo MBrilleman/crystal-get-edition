@@ -1105,6 +1105,11 @@ _PlayersPCAskWhatDoText::
 	line "to do?"
 	done
 
+_More1AskWhatDoText:
+	text "More options"
+	line "..."
+	done
+
 _PlayersPCHowManyWithdrawText::
 	text "How many do you"
 	line "want to withdraw?"

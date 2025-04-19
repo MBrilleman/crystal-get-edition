@@ -20,7 +20,6 @@ Changes made:
 - Field moves can be used by Pokémon that can learn the move but don't have the move learned, e.g. Surf or Cut. (Badges still required)
 - Added running by holding 'B'.
 - Tms now display names when buying or given to player.
-- Added the PC as a key item so it is accessible from everywhere.
 - Kurt now makes Apicornballs instantly.
 - Low Health beeps stop after beeping four times.
 - Infinitely reuseable TMs.
@@ -59,6 +58,16 @@ The code to determine a Pokémons gender was modified so that more stats are use
 ## Added tradeback NPC
 
 Added Samson Oak in Elm's Pokémon Lab. Trading a Pokémon to Samson Oak instantly trades back the same Pokémon back to you, triggering trade evolutions without having to connect to a second game.
+
+## Pocket PC and Move Reminder
+
+Added the Pocket PC as a Key Item. The player recieves the Pocket PC from Prof. Elm's aide after selecting their starter Pokémon.\
+The Pocket PC is usable from anywhere in the world from the Key-items bag to access their PC.\
+\
+Added an extra option to the PC and Pocket PC that functions as a Move Reminder.\
+The Move Reminder can teach a Pokémon any move that a species is able to learn by leveling up.\
+The Move Reminder is free of charge.\
+
 
 ## Bug fixes
 

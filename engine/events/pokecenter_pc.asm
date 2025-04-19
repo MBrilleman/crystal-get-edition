@@ -7,10 +7,11 @@
 	; PokemonCenterPC.Jumptable indexes
 	const_def
 	const PCPCITEM_PLAYERS_PC   ; 0
-	const PCPCITEM_BILLS_PC     ; 1
-	const PCPCITEM_OAKS_PC      ; 2
-	const PCPCITEM_HALL_OF_FAME ; 3
-	const PCPCITEM_TURN_OFF     ; 4
+	const PCPCITEM_MOVE_RELEARNER ; 1
+	const PCPCITEM_BILLS_PC     ; 2
+	const PCPCITEM_OAKS_PC      ; 3
+	const PCPCITEM_HALL_OF_FAME ; 4
+	const PCPCITEM_TURN_OFF     ; 5
 
 PokemonCenterPC:
 	call PC_CheckPartyForPokemon
@@ -56,12 +57,14 @@ PokemonCenterPC:
 .Jumptable:
 ; entries correspond to PCPCITEM_* constants
 	dw PlayersPC,    .String_PlayersPC
+	dw MoveRelearnerPC, .String_MoveRelearnerPC
 	dw BillsPC,      .String_BillsPC
 	dw OaksPC,       .String_OaksPC
 	dw HallOfFamePC, .String_HallOfFame
 	dw TurnOffPC,    .String_TurnOff
 
 .String_PlayersPC:  db "<PLAYER>'s PC@"
+.String_MoveRelearnerPC db "Move Reminder@"
 .String_BillsPC:    db "BILL's PC@"
 .String_OaksPC:     db "PROF.OAK's PC@"
 .String_HallOfFame: db "HALL OF FAME@"
@@ -78,17 +81,19 @@ PokemonCenterPC:
 	db -1 ; end
 
 	; PCPC_BEFORE_HOF
-	db 4
+	db 5
 	db PCPCITEM_BILLS_PC
 	db PCPCITEM_PLAYERS_PC
+	db PCPCITEM_MOVE_RELEARNER
 	db PCPCITEM_OAKS_PC
 	db PCPCITEM_TURN_OFF
 	db -1 ; end
 
 	; PCPC_POSTGAME
-	db 5
+	db 6
 	db PCPCITEM_BILLS_PC
 	db PCPCITEM_PLAYERS_PC
+	db PCPCITEM_MOVE_RELEARNER
 	db PCPCITEM_OAKS_PC
 	db PCPCITEM_HALL_OF_FAME
 	db PCPCITEM_TURN_OFF
@@ -144,6 +149,12 @@ BillsPC:
 	ld hl, PokecenterBillsPCText
 	call PC_DisplayText
 	farcall _BillsPC
+	and a
+	ret
+
+MoveRelearnerPC:
+	call PC_PlayChoosePCSound
+	farcall _MoveRelearner
 	and a
 	ret
 
@@ -665,6 +676,7 @@ PokecenterPCWhoseText:
 PokecenterBillsPCText:
 	text_far _PokecenterBillsPCText
 	text_end
+
 
 PokecenterPlayersPCText:
 	text_far _PokecenterPlayersPCText

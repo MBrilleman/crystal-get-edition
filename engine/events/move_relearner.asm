@@ -5,23 +5,13 @@ const_def
 	const MOVERELEARNERTEXT_COMEAGAIN
 	const MOVERELEARNERTEXT_EGG
 	const MOVERELEARNERTEXT_NOTAPOKEMON
-	const MOVERELEARNERTEXT_NOTENOUGHMONEY
 	const MOVERELEARNERTEXT_NOMOVESTOLEARN
 
-MoveRelearner:
+_MoveRelearner:
 	ld a, MOVERELEARNERTEXT_INTRO
 	call PrintMoveRelearnerText
-	;farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
-	;ld hl, .cost_to_relearn
-	;ld de, hMoneyTemp
-	;ld bc, 3
-	;call CopyBytes
-	;ld bc, hMoneyTemp
-	;ld de, wMoney
-	;farcall CompareMoney
-	;jp c, .not_enough_money
 	ld a, MOVERELEARNERTEXT_WHICHMON
 	call PrintMoveRelearnerText
 	call JoyWaitAorB
@@ -32,7 +22,7 @@ MoveRelearner:
 
 	ld a, [wCurPartySpecies]
 	cp EGG
-	jr z, .egg
+	jp z, .egg ;was jr nu jp?
 
 	call IsAPokemon
 	jr c, .no_mon
@@ -58,16 +48,6 @@ MoveRelearner:
 	ld a, b
 	and a
 	jr z, .skip_learn
-	;ld hl, .cost_to_relearn
-	;ld de, hMoneyTemp
-	;ld bc, 3
-	;call CopyBytes
-	;ld bc, hMoneyTemp
-	;ld de, wMoney
-	;farcall TakeMoney
-	;ld de, SFX_TRANSACTION
-	;call PlaySFX
-	;call WaitSFX
 .skip_learn
 	call CloseSubmenu
 	call SpeechTextbox
@@ -79,10 +59,6 @@ MoveRelearner:
 	ld a, MOVERELEARNERTEXT_EGG
 	call PrintMoveRelearnerText
 	ret
-;.not_enough_money
-	;ld a, MOVERELEARNERTEXT_NOTENOUGHMONEY
-	;call PrintMoveRelearnerText
-	;ret
 .no_mon
 	ld a, MOVERELEARNERTEXT_NOTAPOKEMON
 	call PrintMoveRelearnerText
@@ -91,9 +67,6 @@ MoveRelearner:
 	ld a, MOVERELEARNERTEXT_NOMOVESTOLEARN
 	call PrintMoveRelearnerText
 	ret
-
-;.cost_to_relearn
-	;dt 1000
 
 GetRelearnableMoves:
 	; Get moves relearnable by CurPartyMon
@@ -393,27 +366,14 @@ PrintMoveRelearnerText:
 	dw .ComeAgain
 	dw .Egg
 	dw .NotMon
-	dw .NotEnoughMoney
 	dw .NoMovesToLearn
 
 .Intro
-	text "Hello! I am the"
-	line "MOVE RELEARNER."
-
-	para "I know all the"
-	line "moves that can be"
-
-	para "learned for each"
-	line "#MON."
-
-	para "For just ¥1000, I"
-	line "can share that"
-
-	para "knowledge with"
-	line "you. How about it?"
+	text "Use the"
+	line "Move Reminder?"
 	done
 .WhichMon
-	text "Excellent! Which"
+	text "Which"
 	line "#MON should"
 	cont "remember a move?"
 	done
@@ -422,10 +382,7 @@ PrintMoveRelearnerText:
 	line "it remember?"
 	done
 .ComeAgain
-	text "If you want your"
-	line "#MON to remem-"
-	cont "ber moves, come"
-	cont "back to me."
+	text "Ok doei"
 	done
 .Egg
 	text "An EGG can't learn"
@@ -434,10 +391,6 @@ PrintMoveRelearnerText:
 .NotMon
 	text "What?! That's not"
 	line "a #MON!"
-	done
-.NotEnoughMoney
-	text "You don't have"
-	line "enough money."
 	done
 .NoMovesToLearn
 	text "This #MON can't"

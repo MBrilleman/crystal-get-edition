@@ -2261,6 +2261,7 @@ wCurMoveNum:: db
 wLastPocket:: db
 
 wPCItemsCursor::        db
+wMore1Cursor:			db
 wPartyMenuCursor::      db
 wItemsPocketCursor::    db
 wKeyItemsPocketCursor:: db
@@ -2268,6 +2269,8 @@ wBallsPocketCursor::    db
 wTMHMPocketCursor::     db
 
 wPCItemsScrollPosition::        db
+	ds 1
+wMore1ScrollPosition::			db
 	ds 1
 wItemsPocketScrollPosition::    db
 wKeyItemsPocketScrollPosition:: db
