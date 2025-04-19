@@ -25,6 +25,7 @@ Changes made:
 - Low Health beeps stop after beeping four times.
 - Infinitely reuseable TMs.
 - Enemy trainers no longer have a 25% extra chance of missing their status moves.
+- Exp share similar to gen 6, also given by Oak in mr pokemons house.
 
 ## Bug-catching contest
 
