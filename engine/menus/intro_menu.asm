@@ -889,9 +889,9 @@ RivalNameMenuHeaderIntro:
 	db "NEW NAME@"
 RivalNames:
 	db "SILVER@"
-	db "KAMON@"
-	db "OSCAR@"
-	db "MAX@"
+	db "Maarten@"
+	db "Rob@"
+	db "Marcus@"
 	db 2 ; title indent
 	db " NAME @" ; title
 
