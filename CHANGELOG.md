@@ -24,8 +24,8 @@ Changes made:
 - Low Health beeps stop after beeping four times.
 - Infinitely reuseable TMs.
 - Enemy trainers no longer have a 25% extra chance of missing their status moves.
-- Exp share similar to gen 6, also given by Oak in mr pokemons house. Replaced lotery reward and red scale reward to lucky egg.
-- Added batle autoprompt.
+- Reworked the EXP.SHARE item to function like the 6th Generation Pokémon games. It is now a Key-item instead of a Held-item. Replaced the Goldenrod Lottery reward and RED SCALE reward to give the player a Lucky Egg instead.
+- Added battle autoprompt. Battle text now continues to progress without requiring any extra user input.
 - Added the naming sequence of the rival during intro screen
 - Resetting time can be done on the main screen using down + B
 
@@ -45,7 +45,8 @@ Removed all mentions of weekdays in their text. Instead they make jokes and puns
 
 ## Rival's Pokémon have held items
 
-- Removed code that forbade the Rival having held items on their Pokémon.
+Removed code that forbade the Rival having held items on their Pokémon.\
+Made the following changes to the Rival fights:
 - Gave the unevolved starter Pokémon on each Rival's team a BERRY (10 HP).
 - Gave the evolved starter Pokémon on each Rival's team a GOLD BERRY (30 HP).
 - Gave the Sneasel on each Rival's team a MIRACLE BERRY (Gen 2's Lum Berry).
@@ -61,12 +62,12 @@ Added Samson Oak in Elm's Pokémon Lab. Trading a Pokémon to Samson Oak instant
 
 ## Pocket PC and Move Reminder
 
-Added the Pocket PC as a Key Item. The player recieves the Pocket PC from Prof. Elm's aide after selecting their starter Pokémon.\
-The Pocket PC is usable from anywhere in the world from the Key-items bag to access their PC.\
+Added the Pocket PC as a Key Item.\
+-The player recieves the Pocket PC from Prof. Elm's aide after selecting their starter Pokémon.
+-The Pocket PC is usable from anywhere in the world to give access the users PC system.
 \
 Added an extra option to the PC and Pocket PC that functions as a Move Reminder.\
 The Move Reminder can teach a Pokémon any move that a species is able to learn by leveling up.\
-The Move Reminder is free of charge.\
 
 
 ## Bug fixes
