@@ -95,6 +95,8 @@ MrPokemonsHouse_OakScript:
 	setflag ENGINE_POKEDEX
 	writetext MrPokemonsHouse_OakText2
 	waitbutton
+    verbosegiveitem EXP_SHARE
+    writetext MrPokemonsHouse_OakText3
 	closetext
 	turnobject PLAYER, DOWN
 	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
@@ -315,7 +317,18 @@ MrPokemonsHouse_OakText2:
 	para "complete that"
 	line "#DEX!"
 
-	para "But I've stayed"
+	done
+
+MrPokemonsHouse_OakText3:
+	text "That is an EXP."
+	line "Share."
+
+	para "Use it to make"
+	line "your journey"
+
+    para "easier."
+	
+    para "But I've stayed"
 	line "too long."
 
 	para "I have to get to"
@@ -324,6 +337,7 @@ MrPokemonsHouse_OakText2:
 
 	para "<PLAY_G>, I'm"
 	line "counting on you!"
+
 	done
 
 MrPokemonText_GimmeTheScale:
