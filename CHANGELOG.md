@@ -27,6 +27,8 @@ Changes made:
 - Enemy trainers no longer have a 25% extra chance of missing their status moves.
 - Exp share similar to gen 6, also given by Oak in mr pokemons house. Replaced lotery reward and red scale reward to lucky egg.
 - Added batle autoprompt.
+- Added the naming sequence of the rival during intro screen
+- Resetting time can be done on the main screen using down + B
 
 ## Bug-catching contest
 
