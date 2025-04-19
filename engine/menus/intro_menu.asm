@@ -81,11 +81,27 @@ PlayerProfileSetup:
 	farcall CheckMobileAdapterStatus
 	jr c, .ok
 	farcall InitGender
+	ld hl, TextJump_PasswordOption
+	call PrintText
+	call YesNoBox
+	ret c
+	
+	call RotateFourPalettesLeft
+	;call ClearTileMap
+	
+	ld b, NAME_PASSWORD
+	ld de, wGreensName
+	farcall NamingScreen
+    farcall CheckSpecialPasswordUnlock
 	ret
 .ok
 	ld c, 0
 	farcall InitMobileProfile
 	ret
+
+TextJump_PasswordOption:
+	text_far Text_PasswordOption
+	text_end
 
 if DEF(_DEBUG)
 DebugRoom: ; unreferenced
@@ -292,6 +308,15 @@ InitializeNPCNames:
 
 	ld hl, .Green
 	ld de, wGreensName
+	call .Copy
+
+	ld hl, .PrevRed
+	ld de, wRedRivalName
+	call .Copy
+
+	ld hl, .PrevBlue
+	ld de, wBlueRivalName
+    call .Copy
 
 .Copy:
 	ld bc, NAME_LENGTH
@@ -302,6 +327,8 @@ InitializeNPCNames:
 .Red:    db "RED@"
 .Green:  db "GREEN@"
 .Mom:    db "MOM@"
+.PrevRed db "REDP@"
+.PrevBlue db "BlueP@"
 
 InitializeWorld:
 	call ShrinkPlayer
@@ -339,6 +366,7 @@ Continue:
 	farcall TryLoadSaveFile
 	jr c, .FailToLoad
 	farcall _LoadData
+    farcall CheckSpecialPasswordUnlock
 	call LoadStandardMenuHeader
 	call DisplaySaveInfoOnContinue
 	ld a, $1

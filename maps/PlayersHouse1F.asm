@@ -154,11 +154,17 @@ NeighborScript:
 	faceplayer
 	opentext
 	checktime MORN
-	iftrue .MornScript
+	iftrue  .RivalzText ;.MornScript
 	checktime DAY
-	iftrue .DayScript
+	iftrue .RivalzText  ;.DayScript
 	checktime NITE
-	iftrue .NiteScript
+	iftrue .RivalzText  ;.NiteScript
+
+.RivalzText:
+    writetext RivalsText
+    promptbutton
+    sjump .Main
+
 
 .MornScript:
 	writetext NeighborMornIntroText
@@ -317,6 +323,18 @@ ImBehindYouText:
 	para "I'm behind you all"
 	line "the way!"
 	done
+
+;TODO remove debug
+RivalsText:
+    text "Red new Name:"
+    line "<GREEN>"
+    
+    para "RED new Name:"
+    line "<PREVRED>"
+    
+    para "Blue new Name:"
+    line "<PREVBLUE>"
+    done
 
 NeighborMornIntroText:
 	text "Good morning,"

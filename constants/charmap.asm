@@ -39,6 +39,8 @@
 	charmap "<DEXEND>",  $5f
     charmap "<ATPRA>",	 $60
     charmap "<ATDNE>",	 $61
+    charmap "<PREVRED>", $62
+    charmap "<PREVBLUE>",$63
 
 ; Actual characters (from gfx/font/font_extra.png)
 
