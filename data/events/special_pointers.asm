@@ -184,4 +184,5 @@ SpecialsPointers::
 	add_special InitialClearDSTFlag
 	add_special UnusedDummySpecial ; unused
 
+	add_special MoveRelearner
     add_special TradebackNPC
