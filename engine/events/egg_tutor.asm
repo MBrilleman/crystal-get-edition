@@ -1,19 +1,29 @@
 const_def
-	const MOVERELEARNERTEXT_INTRO
-	const MOVERELEARNERTEXT_WHICHMON
-	const MOVERELEARNERTEXT_WHICHMOVE
-	const MOVERELEARNERTEXT_COMEAGAIN
-	const MOVERELEARNERTEXT_EGG
-	const MOVERELEARNERTEXT_NOTAPOKEMON
-	const MOVERELEARNERTEXT_NOMOVESTOLEARN
+	const EGGTUTORTEXT_INTRO
+	const EGGTUTORTEXT_WHICHMON
+	const EGGTUTORTEXT_WHICHMOVE
+	const EGGTUTORTEXT_COMEAGAIN
+	const EGGTUTORTEXT_EGG
+	const EGGTUTORTEXT_NOTAPOKEMON
+	const EGGTUTORTEXT_NOTENOUGHMONEY
+	const EGGTUTORTEXT_NOMOVESTOLEARN
 
-_MoveRelearner:
-	ld a, MOVERELEARNERTEXT_INTRO
-	call PrintMoveRelearnerText
+EggTutor:
+	ld a, EGGTUTORTEXT_INTRO
+	call PrintEggTutorText
+	farcall PlaceMoneyTopRight
 	call YesNoBox
 	jp c, .cancel
-	ld a, MOVERELEARNERTEXT_WHICHMON
-	call PrintMoveRelearnerText
+	ld hl, .cost_to_relearn
+	ld de, hMoneyTemp
+	ld bc, 3
+	call CopyBytes
+	ld bc, hMoneyTemp
+	ld de, wMoney
+	farcall CompareMoney
+	jp c, .not_enough_money
+	ld a, EGGTUTORTEXT_WHICHMON
+	call PrintEggTutorText
 	call JoyWaitAorB
 
 	ld b, $6
@@ -27,14 +37,14 @@ _MoveRelearner:
 	call IsAPokemon
 	jr c, .no_mon
 
-	call GetRelearnableMoves
+	call GetEggMoves
 	jr z, .no_moves
 
-	ld a, MOVERELEARNERTEXT_WHICHMOVE
-	call PrintMoveRelearnerText
+	ld a, EGGTUTORTEXT_WHICHMOVE
+	call PrintEggTutorText
 	call JoyWaitAorB
 
-	call ChooseMoveToLearn
+	call ChooseEggMoveToLearn
 	jr c, .skip_learn
 	ld a, [wMenuSelection]
 	ld [wTempSpecies], a
@@ -48,27 +58,44 @@ _MoveRelearner:
 	ld a, b
 	and a
 	jr z, .skip_learn
+	ld hl, .cost_to_relearn
+	ld de, hMoneyTemp
+	ld bc, 3
+	call CopyBytes
+	ld bc, hMoneyTemp
+	ld de, wMoney
+	farcall TakeMoney
+	ld de, SFX_TRANSACTION
+	call PlaySFX
+	call WaitSFX
 .skip_learn
 	call CloseSubmenu
 	call SpeechTextbox
 .cancel
-	ld a, MOVERELEARNERTEXT_COMEAGAIN
-	call PrintMoveRelearnerText
+	ld a, EGGTUTORTEXT_COMEAGAIN
+	call PrintEggTutorText
 	ret
 .egg
-	ld a, MOVERELEARNERTEXT_EGG
-	call PrintMoveRelearnerText
+	ld a, EGGTUTORTEXT_EGG
+	call PrintEggTutorText
+	ret
+.not_enough_money
+	ld a, EGGTUTORTEXT_NOTENOUGHMONEY
+	call PrintEggTutorText
 	ret
 .no_mon
-	ld a, MOVERELEARNERTEXT_NOTAPOKEMON
-	call PrintMoveRelearnerText
+	ld a, EGGTUTORTEXT_NOTAPOKEMON
+	call PrintEggTutorText
 	ret
 .no_moves
-	ld a, MOVERELEARNERTEXT_NOMOVESTOLEARN
-	call PrintMoveRelearnerText
+	ld a, EGGTUTORTEXT_NOMOVESTOLEARN
+	call PrintEggTutorText
 	ret
 
-GetRelearnableMoves:
+.cost_to_relearn
+	dt 2500
+
+GetEggMoves:
 	; Get moves relearnable by CurPartyMon
 	; Returns z if no moves can be relearned.
 	ld hl, wd002
@@ -95,20 +122,20 @@ GetRelearnableMoves:
 	push bc
 	ld b, 0
 	ld c, a
-	ld hl, EvosAttacksPointers
+	ld hl, EggMovePointers
 	add hl, bc
 	add hl, bc
-	ld a, BANK(EvosAttacksPointers)
+	ld a, BANK(EggMovePointers)
 	call GetFarWord
 .skip_evos
-	ld a, BANK(EvosAttacks)
+	ld a, BANK(EggAttacks)
 	call GetFarByte
 	inc hl
 	and a
 	jr nz, .skip_evos
 
 .loop_moves
-	ld a, BANK(EvosAttacks)
+	ld a, BANK(EggAttacks)
 	call GetFarByte
 	inc hl
 	and a
@@ -116,15 +143,15 @@ GetRelearnableMoves:
 	ld c, a
 	ld a, [wCurPartyLevel]
 	cp c
-	ld a, BANK(EvosAttacks)
+	ld a, BANK(EggAttacks)
 	call GetFarByte
 	inc hl
 	jr c, .loop_moves
 
 	ld c, a
-	call CheckAlreadyInList
+	call EggCheckAlreadyInList
 	jr c, .loop_moves
-	call CheckPokemonAlreadyKnowsMove
+	call EggCheckPokemonAlreadyKnowsMove
 	jr c, .loop_moves
 	ld a, c
 	ld [de], a
@@ -144,7 +171,7 @@ GetRelearnableMoves:
 	and a
 	ret
 
-CheckAlreadyInList:
+EggCheckAlreadyInList:
 	push hl
 	ld hl, wd002 + 1
 .loop
@@ -162,7 +189,7 @@ CheckAlreadyInList:
 	and a
 	ret
 
-CheckPokemonAlreadyKnowsMove:
+EggCheckPokemonAlreadyKnowsMove:
 	; Check if move c is in the selected pokemon's movepool already.
 	; Returns c if yes.
 	push hl
@@ -186,7 +213,7 @@ CheckPokemonAlreadyKnowsMove:
 	scf
 	ret
 
-ChooseMoveToLearn:
+ChooseEggMoveToLearn:
 	; Open a full-screen scrolling menu
 	; Number of items stored in wd002
 	; List of items stored in wd002 + 1
@@ -348,7 +375,7 @@ ChooseMoveToLearn:
 	predef PrintMoveDescription
 	ret
 
-PrintMoveRelearnerText:
+PrintEggTutorText:
 	ld e, a
 	ld d, 0
 	ld hl, .TextPointers
@@ -366,34 +393,67 @@ PrintMoveRelearnerText:
 	dw .ComeAgain
 	dw .Egg
 	dw .NotMon
+	dw .NotEnoughMoney
 	dw .NoMovesToLearn
 
 .Intro
-	text "Use the"
-	line "Move Reminder?"
+	text "Hello! I am the"
+	line "Egg Move Tutor!"
+
+    para "I can do more than"
+    line "that fancy POCKET"
+    cont "PC of yours."
+
+    para "I can teach your"
+    line "#MON special"
+    cont "moves that they"
+    cont "can only learn"
+    cont "by breeding."
+
+    para "Each Egg move"
+    line "costs ¥2500 to"
+    cont "learn."
+
+    para "Interested?"
 	done
 .WhichMon
-	text "Which"
+	text "Excellent! Which"
 	line "#MON should"
-	cont "remember a move?"
+	cont "learn an Egg move?"
 	done
 .WhichMove
-	text "Which move should"
-	line "it remember?"
+	text "Which Egg move"
+	line "should it learn?"
 	done
 .ComeAgain
-	text "Ok doei"
+	text "If you want your"
+	line "#MON to learn"
+	cont "Egg moves, come"
+	cont "back to me."
 	done
 .Egg
-	text "An EGG can't learn"
-	line "moves."
+	text "Sorry! That's not"
+	line "Possible."
+
+    para "I know I'm the"
+    line "Egg move tutor."
+    
+    para "But I don't tutor"
+    line "EGGs."
+
+    para "Only hatched"
+    line "#MON."
 	done
 .NotMon
 	text "What?! That's not"
 	line "a #MON!"
 	done
+.NotEnoughMoney
+	text "You don't have"
+	line "enough money."
+	done
 .NoMovesToLearn
 	text "This #MON can't"
-	line "learn any moves"
-	cont "from me."
+	line "learn any egg"
+	cont "moves from me."
 	done

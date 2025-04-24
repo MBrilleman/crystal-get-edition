@@ -1,11 +1,13 @@
 EggMovePointers::
 	table_width 2
 	dw BulbasaurEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
+	dw BulbasaurEggMoves
+	dw BulbasaurEggMoves
 	dw CharmanderEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
+	dw CharmanderEggMoves
+	dw CharmanderEggMoves
+	dw SquirtleEggMoves
+	dw SquirtleEggMoves
 	dw SquirtleEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -13,21 +15,19 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
 	dw PidgeyEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
+	dw PidgeyEggMoves
+	dw PidgeyEggMoves
 	dw RattataEggMoves
-	dw NoEggMoves
+	dw RattataEggMoves
 	dw SpearowEggMoves
-	dw NoEggMoves
+	dw SpearowEggMoves
+	dw EkansEggMoves
 	dw EkansEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
 	dw SandshrewEggMoves
-	dw NoEggMoves
+	dw SandshrewEggMoves
 	dw NidoranFEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -185,7 +185,7 @@ EggMovePointers::
 	dw MarillEggMoves
 	dw NoEggMoves
 	dw SudowoodoEggMoves
-	dw NoEggMoves
+	dw PoliwagEggMoves
 	dw HoppipEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

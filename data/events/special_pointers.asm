@@ -185,4 +185,5 @@ SpecialsPointers::
 	add_special UnusedDummySpecial ; unused
 
 	add_special _MoveRelearner
+	add_special EggTutor
     add_special TradebackNPC

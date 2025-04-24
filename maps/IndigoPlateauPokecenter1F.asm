@@ -5,6 +5,7 @@
 	const INDIGOPLATEAUPOKECENTER1F_RIVAL
 	const INDIGOPLATEAUPOKECENTER1F_GRAMPS
 	const INDIGOPLATEAUPOKECENTER1F_ABRA
+	const INDIGOPLATEAUPOKECENTER1F_COOLTRAINER_M2
 
 IndigoPlateauPokecenter1F_MapScripts:
 	def_scene_scripts
@@ -145,6 +146,14 @@ IndigoPlateauPokecenter1FClerkScript:
 
 IndigoPlateauPokecenter1FCooltrainerMScript:
 	jumptextfaceplayer IndigoPlateauPokecenter1FCooltrainerMText
+
+EggTutorScript:
+	faceplayer
+	opentext
+	special EggTutor
+	waitbutton
+	closetext
+	end
 
 TeleportGuyScript:
 	faceplayer
@@ -322,3 +331,4 @@ IndigoPlateauPokecenter1F_MapEvents:
 	object_event 16,  9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	object_event  1,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, EVENT_TELEPORT_GUY
 	object_event  0,  9, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AbraScript, EVENT_TELEPORT_GUY
+	object_event  11,  9, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EggTutorScript, -1
