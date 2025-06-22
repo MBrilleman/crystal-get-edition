@@ -61,13 +61,6 @@ PlayersNeighborsDaughterText:
 	cont "Ja dat heb je"
 	cont "goed gelezen."
 
-	para "Oh! btw:"
-	line "Dit huis heeft"
-	cont "een ingang, maar"
-	cont "twee uitgangen."
-	cont "links EN rechts"
-	cont "Kijk zelf maar!"
-
 	para "DDDM"
 	line "Dat betekend:"
 	cont "Doei Doei De"
@@ -112,8 +105,8 @@ PlayersNeighborsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, LANCES_ROOM, 1
-	warp_event  3,  7, SILVER_CAVE_ROOM_3, 1
+	warp_event  2,  7, NEW_BARK_TOWN, 3
+	warp_event  3,  7, NEW_BARK_TOWN, 3
 	
 
 	def_coord_events

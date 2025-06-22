@@ -6,21 +6,21 @@ SilverCaveRoom3_MapScripts:
 
 	def_callbacks
 
-Red:
+Ons:
 	special FadeOutMusic
 	faceplayer
 	opentext
-	writetext RedSeenText
+	writetext OnsSeenText
 	waitbutton
 	closetext
-	winlosstext RedWinLossText, RedWinLossText
-	loadtrainer RED, RED1
+	winlosstext OnsWinLossText, OnsWinLossText
+	loadtrainer RED, RED2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	special FadeOutMusic
 	opentext
-	writetext RedLeavesText
+	writetext OnsLeavesText
 	waitbutton
 	closetext
 	special FadeOutToBlack
