@@ -1,3 +1,5 @@
+	object_const_def
+
 RedsHouse2F_MapScripts:
 	def_scene_scripts
 
@@ -23,6 +25,48 @@ RedsHouse2FPCText:
 	cont "in a long time…"
 	done
 
+Red:
+	checkevent EVENT_BEAT_BLUE
+	iftrue .FightTime
+	opentext
+	writetext RedNotReady
+	waitbutton
+	closetext
+	end
+.FightTime:
+	faceplayer
+	special FadeOutMusic
+	pause 15
+	opentext
+	writetext RedReady
+	waitbutton
+	closetext
+	winlosstext RedWinLossText, RedWinLossText
+	loadtrainer RED, RED1
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	special FadeOutMusic
+	opentext
+	writetext RedReady
+	waitbutton
+	closetext
+	end
+
+RedNotReady:
+	text "He's ignoring me..."
+	done
+
+RedReady:
+	text "<……>"
+	line "<……>"
+	done
+
+RedWinLossText:
+	text "…"
+	done
+
+
 RedsHouse2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -36,3 +80,4 @@ RedsHouse2F_MapEvents:
 	bg_event  0,  1, BGEVENT_READ, RedsHouse2FPCScript
 
 	def_object_events
+	object_event  5,  3, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Red, -1
