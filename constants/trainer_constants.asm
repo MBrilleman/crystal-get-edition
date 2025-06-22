@@ -703,5 +703,8 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
+	const MYSTICALMAN2
+	const MYSTICALMAN3
+	const MYSTICALMAN4
 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

@@ -2,7 +2,7 @@
 	const ELMSHOUSE_ELMS_WIFE
 	const ELMSHOUSE_ELMS_SON
     const ELMSHOUS_CHANSEY_TRAINER_1
-    const ELMSHOUS_CHANSEY_TRAINER_2
+    ; const ELMSHOUS_CHANSEY_TRAINER_2
     const ELMSHOUS_CHANSEY_TRAINER_3
 
 ElmsHouse_MapScripts:
@@ -12,6 +12,7 @@ ElmsHouse_MapScripts:
 
 ElmsWife:
 	jumptextfaceplayer ElmsWifeText
+	
 
 ElmsSon:
 	jumptextfaceplayer ElmsSonText
@@ -82,6 +83,82 @@ ElmsHousePCText:
 	cont "search papers."
 	done
 
+BlisseyBoy1:
+	checkevent EVENT_BEAT_WHITNEY
+	iftrue .Battle1
+	opentext
+	writetext BlisseyNotReady
+	waitbutton
+	closetext
+	end
+
+.Battle1
+	opentext
+	writetext BlisseyReady
+	waitbutton
+	closetext
+	winlosstext Blisseywinloss, Blisseywinloss
+	loadtrainer MYSTICALMAN, MYSTICALMAN2
+	startbattle
+	reloadmapafterbattle
+	end
+
+BlisseyBoy2:
+	checkevent EVENT_BEAT_CLAIR
+	iftrue .Battle2
+	opentext
+	writetext BlisseyNotReady
+	waitbutton
+	closetext
+	end
+
+.Battle2
+	opentext
+	writetext BlisseyReady
+	waitbutton
+	closetext
+	winlosstext Blisseywinloss, Blisseywinloss
+	loadtrainer MYSTICALMAN, MYSTICALMAN3
+	startbattle
+	reloadmapafterbattle
+	end
+
+
+BlisseyBoy3:
+	checkevent EVENT_BEAT_JANINE
+	iftrue .Battle3
+	opentext
+	writetext BlisseyNotReady
+	waitbutton
+	closetext
+	end
+
+.Battle3
+	opentext
+	writetext BlisseyReady
+	waitbutton
+	closetext
+	winlosstext Blisseywinloss, Blisseywinloss
+	loadtrainer MYSTICALMAN, MYSTICALMAN4
+	startbattle
+	reloadmapafterbattle
+	end
+
+
+Blisseywinloss:
+	text "Lekker man"
+	done
+
+BlisseyNotReady:
+	text "You're not ready"
+	line "for these drums!"
+	done
+
+BlisseyReady:
+	text "Prepare your Belly"
+	line "!!!!!!!!!!!!!!!!!!"
+	done
+
 ElmsHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -99,6 +176,6 @@ ElmsHouse_MapEvents:
 	def_object_events
 	object_event  1,  5, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
 	object_event  5,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
-    object_event  1,  1, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
-    object_event  2,  1, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
-    object_event  3,  1, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+    object_event  1,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlisseyBoy1, -1
+    object_event  2,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlisseyBoy2, -1
+    object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlisseyBoy3, -1
