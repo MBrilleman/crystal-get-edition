@@ -35,17 +35,21 @@ Ons:
 	end
 
 OnsSeenText:
-	text "<……>"
-	line "<……>"
+	text "This is the moment"
+	line "of truth."
+
+    para "Back to Elm or"
+    line "on to Birch?"
 	done
 
 OnsWinLossText:
-	text "…"
+	text "That's uh what you"
+    line "call conquer get."
 	done
 
 OnsLeavesText:
-	text "<……>"
-	line "<……>"
+	text "Give the professor"
+    line "my regards!"
 	done
 
 SilverCaveRoom3_MapEvents:

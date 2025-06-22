@@ -62,8 +62,9 @@ ViridianGymStatue:
 	jumpstd GymStatue2Script
 
 LeaderBlueBeforeText:
-	text "BLUE: Yo! Finally"
-	line "got here, huh?"
+	text "MarcRob: Yo!"
+    line "Finally"
+	cont "got here, huh?"
 
 	para "I wasn't in the"
 	line "mood at CINNABAR,"
