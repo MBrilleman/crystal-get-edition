@@ -39,7 +39,7 @@ Red:
 	writetext RedReady
 	waitbutton
 	closetext
-	winlosstext RedWinLossText, RedWinLossText
+	winlosstext RedWinText, RedLossText
 	loadtrainer RED, RED1
 	startbattle
 	dontrestartmapmusic
@@ -60,9 +60,13 @@ RedReady:
 	line "<……>"
 	done
 
-RedWinLossText:
+RedWinText:
 	text "…"
 	done
+
+RedLossText:
+    text "homo"
+    done
 
 RedsHouse2F_MapEvents:
 	db 0, 0 ; filler
