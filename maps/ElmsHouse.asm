@@ -1,6 +1,9 @@
 	object_const_def
 	const ELMSHOUSE_ELMS_WIFE
 	const ELMSHOUSE_ELMS_SON
+    const ELMSHOUS_CHANSEY_TRAINER_1
+    const ELMSHOUS_CHANSEY_TRAINER_2
+    const ELMSHOUS_CHANSEY_TRAINER_3
 
 ElmsHouse_MapScripts:
 	def_scene_scripts
@@ -96,3 +99,6 @@ ElmsHouse_MapEvents:
 	def_object_events
 	object_event  1,  5, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
 	object_event  5,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+    object_event  1,  1, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+    object_event  2,  1, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+    object_event  3,  1, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
