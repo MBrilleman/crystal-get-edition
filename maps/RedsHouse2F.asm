@@ -65,7 +65,7 @@ RedWinText:
 	done
 
 RedLossText:
-    text "homo"
+    text "..."
     done
 
 RedsHouse2F_MapEvents:
