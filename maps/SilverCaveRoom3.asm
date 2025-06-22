@@ -34,16 +34,16 @@ Ons:
 	credits
 	end
 
-RedSeenText:
+OnsSeenText:
 	text "<……>"
 	line "<……>"
 	done
 
-RedWinLossText:
+OnsWinLossText:
 	text "…"
 	done
 
-RedLeavesText:
+OnsLeavesText:
 	text "<……>"
 	line "<……>"
 	done
