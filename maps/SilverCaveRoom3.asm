@@ -36,7 +36,7 @@ Ons:
 
 OnsSeenText:
 	text "Halloooooooooooooo"
-	line "oooooooooooooootjes"
+	line "ooooooooooooootjes"
 
 	para "Nou, daar zijn"
 	line "jullie dan..."
@@ -44,31 +44,29 @@ OnsSeenText:
 	para "Eindelijk!"
 
 	para "Kijk, ik snap het."
-	line "Zo'n nuzlocke duurt"
-	cont "gewoon lang..."
+	line "Zo'n nuzlocke"
+	cont "duurt gewoon lang."
 
-	cont "En al dat verlies"
+	para "En al dat verlies"
 	line "dat je onderweg"
 	cont "leidt."
 
-	cont "Ik vraag me af..."
+	para "Ik vraag me af..."
 	line "Op welke attempt"
 	cont "zitten jullie nu?"
 
-	cont "Wacht, zeg maar"
+	para "Wacht, zeg maar"
 	line "niks."
 
-	cont "Het maakt toch niet"
+	para "Het maakt niet"
 	line "meer uit."
 
-	cont "..."
-
-	cont "Dit is waar het"
+	para "Dit is waar het"
 	line "allemaal eindigt!"
 
-	cont "..."
+	para "..."
 
-	cont "Jij..... of ik?"
+	para "Jij..... Of ik?"
 
 	done
 
@@ -84,6 +82,7 @@ OnsLeavesText:
 	text "Veel succes"
 	line "met #MON"
 	cont "Emerald!"
+	
 	done
 
 SilverCaveRoom3_MapEvents:
