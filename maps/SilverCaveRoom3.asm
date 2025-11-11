@@ -35,49 +35,31 @@ Ons:
 	end
 
 OnsSeenText:
-	text "Halloooooooooooooo"
-	line "oooooooooooooootjes"
+	text "So you've made it"
+	line "all the way here."
 
-	text "Nou, daar zijn"
-	line "jullie dan..."
+	text "Those are some"
+	line "nice Pokémon you've"
+	cont "got there!"
 
-	text "Eindelijk!"
+	text "It would a shame"
+	line "if something were"
+	cont "to happen to them"
 
-	text "Kijk, ik snap het."
-	line "Zo'n nuzlocke duurt"
-	cont "gewoon lang..."
+	text "Let's get ready to"
+	line "rumble!"
 
-	text "En al dat verlies"
-	line "dat je onderweg"
-	cont "leidt."
-
-	text "Ik vraag me af..."
-	line "Op welke attempt"
-	cont "zitten jullie nu?"
-
-	text "Wacht, zeg maar"
-	line "niks."
-
-	text "Het maakt toch niet"
-	line "meer uit."
-
-	text "..."
-
-	text "Dit is waar het"
-	line "allemaal eindigt!"
-
-	text "..."
-
-	text "Jij..... of ik?"
+	text "You're about to be"
+	line "get!"
 
 	done
 
 OnsWinText:
-	text "Ja toch, kanker get"
+	text "Ai noooohhhh"
 	done
 
 OnsLossText:
-	text "GEN ONE? GEN WON!!"
+	text "Ga je uitschrijven"
 	done
 
 OnsLeavesText:
