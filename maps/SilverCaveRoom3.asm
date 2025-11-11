@@ -38,37 +38,37 @@ OnsSeenText:
 	text "Halloooooooooooooo"
 	line "oooooooooooooootjes"
 
-	text "Nou, daar zijn"
+	para "Nou, daar zijn"
 	line "jullie dan..."
 
-	text "Eindelijk!"
+	para "Eindelijk!"
 
-	text "Kijk, ik snap het."
+	para "Kijk, ik snap het."
 	line "Zo'n nuzlocke duurt"
 	cont "gewoon lang..."
 
-	text "En al dat verlies"
+	cont "En al dat verlies"
 	line "dat je onderweg"
 	cont "leidt."
 
-	text "Ik vraag me af..."
+	cont "Ik vraag me af..."
 	line "Op welke attempt"
 	cont "zitten jullie nu?"
 
-	text "Wacht, zeg maar"
+	cont "Wacht, zeg maar"
 	line "niks."
 
-	text "Het maakt toch niet"
+	cont "Het maakt toch niet"
 	line "meer uit."
 
-	text "..."
+	cont "..."
 
-	text "Dit is waar het"
+	cont "Dit is waar het"
 	line "allemaal eindigt!"
 
-	text "..."
+	cont "..."
 
-	text "Jij..... of ik?"
+	cont "Jij..... of ik?"
 
 	done
 
