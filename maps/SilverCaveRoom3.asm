@@ -13,7 +13,7 @@ Ons:
 	writetext OnsSeenText
 	waitbutton
 	closetext
-	winlosstext OnsWinLossText, OnsWinLossText
+	winlosstext OnsWinText, OnsLossText
 	loadtrainer RED, RED2
 	startbattle
 	dontrestartmapmusic
@@ -35,17 +35,55 @@ Ons:
 	end
 
 OnsSeenText:
-	text "<……>"
-	line "<……>"
+	text "Halloooooooooooooo"
+	line "oooooooooooooootjes"
+
+	text "Nou, daar zijn"
+	line "jullie dan..."
+
+	text "Eindelijk!"
+
+	text "Kijk, ik snap het."
+	line "Zo'n nuzlocke duurt"
+	cont "gewoon lang..."
+
+	text "En al dat verlies"
+	line "dat je onderweg"
+	cont "leidt."
+
+	text "Ik vraag me af..."
+	line "Op welke attempt"
+	cont "zitten jullie nu?"
+
+	text "Wacht, zeg maar"
+	line "niks."
+
+	text "Het maakt toch niet"
+	line "meer uit."
+
+	text "..."
+
+	text "Dit is waar het"
+	line "allemaal eindigt!"
+
+	text "..."
+
+	text "Jij..... of ik?"
+
 	done
 
-OnsWinLossText:
-	text "…"
+OnsWinText:
+	text "Ja toch, kanker get"
+	done
+
+OnsLossText:
+	text "GEN ONE? GEN WON!!"
 	done
 
 OnsLeavesText:
-	text "<……>"
-	line "<……>"
+	text "Veel succes"
+	line "met #MON"
+	cont "Emerald!"
 	done
 
 SilverCaveRoom3_MapEvents:
