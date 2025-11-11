@@ -38,18 +38,18 @@ OnsSeenText:
 	text "So you've made it"
 	line "all the way here."
 
-	text "Those are some"
+	para "Those are some"
 	line "nice Pokémon you've"
 	cont "got there!"
 
-	text "It would a shame"
+	para "It would a shame"
 	line "if something were"
 	cont "to happen to them"
 
-	text "Let's get ready to"
+	para "Let's get ready to"
 	line "rumble!"
 
-	text "You're about to be"
+	para "You're about to be"
 	line "get!"
 
 	done
